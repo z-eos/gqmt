@@ -1,7 +1,5 @@
 package App::gqmt;
 
-our $VERSION = 0.01;
-
 =head1 NAME
 
 App::gqmt - a stub module for gqmt
