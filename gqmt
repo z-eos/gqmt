@@ -1,4 +1,4 @@
-#!/usr/bin/env perl
+#!perl
 # -*- mode: cperl; eval: (follow-mode) -*-
 #
 
@@ -28,8 +28,8 @@ my $pkg = {
 	  };
 
 my $re =  {
-	   alpine    => '^(?:docker-base-layer)$',
-	   api       => '^(?:docker-base-layer|develop|rel eease|master|v[0-9]+\.[0-9]+\.[0-9]+)$',
+	   alpine    => '^(?:docker-base-layer|develop|release|master|v[0-9]+\.[0-9]+\.[0-9]+)$',
+	   api       => '^(?:docker-base-layer|develop|release|master|v[0-9]+\.[0-9]+\.[0-9]+)$',
 	   app       => '^(?:docker-base-layer|develop|qa|release|master|v[0-9]+\.[0-9]+\.[0-9]+)$',
 	   scheduler => '^(?:docker-base-layer|develop|release|master|v[0-9]+\.[0-9]+\.[0-9]+)$',
 	  };
@@ -167,7 +167,7 @@ sub del_versions {
 
     $arg->{req}->content( $arg->{jso}->encode({ query => $query }) );
 
-    my $res   = $arg->{lwp}->request($arg->{req});
+    my $res = $arg->{lwp}->request($arg->{req});
 
     if ( ! $res->is_success ) {
       my $res_cont  = $arg->{jso}->decode( $res->content );
@@ -188,7 +188,7 @@ sub del_versions {
     }
 
     p ( $reply, colored => $colored );
-    print "package of version ID: $_, has been successfully deleted\n";
+    print "package of version ID: $_, has been successfully deleted\n" if $arg->{dbg} > 0;
 
   }
 
@@ -321,8 +321,8 @@ gqmt [-h] <-u USER -R REPO -T TOKEN -P PACKAGE> REST OF OPTIONS
 
 script to clean up old package versions from GitHub repository
 
-currently it is fixed, hardcoded list of packages (may be in future it
-becomes configurable)
+currently it (packages list) is fixed, hardcoded list of packages (may
+be in future it becomes configurable)
 
 =head1 OPTIONS
 
