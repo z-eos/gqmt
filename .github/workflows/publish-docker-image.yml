@@ -1,7 +1,7 @@
 name: PublishDockerImage
 on:
   release:
-    types: [edited]
+    types: [published, created, edited, prereleased, released]
 jobs:
   push_to_registry:
     name: Push Docker image to GitHub Packages
