@@ -15,9 +15,9 @@ jobs:
     steps:
       - name: Docker Login
         run: |
-          echo $GITHUB_REPOSITORY
-          echo $GITHUB_ACTOR
-          docker login --username ${{ secrets.GITHUB_REPOSITORY_OWNER }} --password ${{ secrets.GITHUB_TOKEN }} ${{secrets.DOCKER_REGISTRY}}
+          echo "user: ${GITHUB_REPOSITORY%%/*}
+          echo "pkg: ${GITHUB_REPOSITORY##*/}"
+          docker login --username $GITHUB_ACTOR --password ${{ secrets.GITHUB_TOKEN }} ${{secrets.DOCKER_REGISTRY}}
                   
       - name: Docker Build
         run: docker build --tag ${IMAGE}:${GITHUB_REF##*/} --file ./docker/Dockerfile .
