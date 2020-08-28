@@ -1,0 +1,23 @@
+name: main
+on:
+  push:
+    branches:
+      - master
+    tags:
+      - v*
+
+env:
+  IMAGE: ${{secrets.DOCKER_REGISTRY}}/${{secrets.DOCKER_REGISTRY_NAMESPACE}}/gqmt
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Docker Login
+        run: docker login --username ${{secrets.DOCKER_USER}} --password ${{ secrets.GITHUB_TOKEN }} ${{secrets.DOCKER_REGISTRY}}
+                  
+      - name: Docker Build
+        run: docker build --tag ${IMAGE}:${GITHUB_REF##*/} --file ./docker/Dockerfile .
+                    
+      - name: Docker Push
+        run: docker push ${IMAGE}:${GITHUB_REF##*/}
