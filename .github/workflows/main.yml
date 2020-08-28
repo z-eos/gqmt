@@ -13,10 +13,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-       - name: Checkout
-         uses: actions/checkout@v2
-         with:
-           fetch-depth: 1
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
           
       - name: Docker Login
         run: docker login --username ${{secrets.DOCKER_USER}} --password ${{ secrets.GITHUB_TOKEN }} ${{secrets.DOCKER_REGISTRY}}
