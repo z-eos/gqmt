@@ -16,7 +16,7 @@ use Time::Piece;
 
 my  @PROGARG = ($0, @ARGV);
 my  $PROGNAM = fileparse($0);
-our $VERSION = '0.4';
+our $VERSION = '0.5';
 
 my $caller_message = "Printing in line __LINE__ of __FILENAME__; ";
 
