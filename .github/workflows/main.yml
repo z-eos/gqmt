@@ -14,7 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Docker Login
-        run: docker login --username $GITHUB_ACTOR --password ${{ secrets.GITHUB_TOKEN }} ${{secrets.DOCKER_REGISTRY}}
+        run: |
+          echo ${{ secrets.GITHUB_REPOSITORY_OWNER }}
+          echo ${{secrets.DOCKER_REGISTRY}}
+          docker login --username ${{ secrets.GITHUB_REPOSITORY_OWNER }} --password ${{ secrets.GITHUB_TOKEN }} ${{secrets.DOCKER_REGISTRY}}
                   
       - name: Docker Build
         run: docker build --tag ${IMAGE}:${GITHUB_REF##*/} --file ./docker/Dockerfile .
