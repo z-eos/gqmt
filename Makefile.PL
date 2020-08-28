@@ -4,9 +4,9 @@ use warnings;
 use ExtUtils::MakeMaker;
 
 WriteMakefile(
-    NAME             => 'gqmt',
-    ABSTRACT_FROM    => 'gqmt',
-    VERSION_FROM     => 'gqmt',
+    NAME             => 'App::gqmt',
+    ABSTRACT_FROM    => 'lib/App/gqmt.pm',
+    VERSION_FROM     => 'lib/App/gqmt.pm',
     EXE_FILES        => [ 'gqmt' ],
     AUTHOR           => 'Zeus Panchenko <zeus@gnu.org.ua>',
     LICENSE          => 'gpl_3',

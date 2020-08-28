@@ -1,12 +1,14 @@
 package App::gqmt;
 
+our $VERSION = '0.3';
+
 =head1 NAME
 
 App::gqmt - a stub module for gqmt
 
 =head1 DESCRIPTION
 
-This is a stub module, see F<script/gqmt> for details of the app.
+This is a stub module, see F<gqmt> for details of the app.
 
 =head1 AUTHOR
 

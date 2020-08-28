@@ -1,5 +1,5 @@
 {
-   "abstract" : "Graphql Query Mutation Tool",
+   "abstract" : "a stub module for gqmt",
    "author" : [
       "Zeus Panchenko <zeus@gnu.org.ua>"
    ],
@@ -12,7 +12,7 @@
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
       "version" : 2
    },
-   "name" : "gqmt",
+   "name" : "App-gqmt",
    "no_index" : {
       "directory" : [
          "t",
@@ -51,6 +51,6 @@
          "web" : "https://github.com/z-eos/gqmt.git"
       }
    },
-   "version" : "0.2",
+   "version" : "0.3",
    "x_serialization_backend" : "JSON::PP version 4.04"
 }
