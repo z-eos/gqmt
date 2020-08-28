@@ -7,6 +7,10 @@ jobs:
     name: Push Docker image to GitHub Packages
     runs-on: ubuntu-latest
     steps:
+      - name: Debug Output
+        run: |
+          echo "${{ github.actor }} @ ${{ github.repository }}"
+
       - name: Push to GitHub Packages
         uses: docker/build-push-action@v1
         with:
