@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: Docker Login
         run: |
-          echo "user: ${GITHUB_REPOSITORY%%/*}
+          echo "user: ${GITHUB_REPOSITORY%%/*}"
           echo "pkg: ${GITHUB_REPOSITORY##*/}"
           docker login --username $GITHUB_ACTOR --password ${{ secrets.GITHUB_TOKEN }} ${{secrets.DOCKER_REGISTRY}}
                   
