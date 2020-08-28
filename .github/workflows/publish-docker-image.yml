@@ -7,6 +7,9 @@ jobs:
     name: Push Docker image to GitHub Packages
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+    
       - name: Debug Output
         run: |
           echo "${{ github.actor }} @ ${{ github.repository }}"
