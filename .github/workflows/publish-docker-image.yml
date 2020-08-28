@@ -17,5 +17,5 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: docker.pkg.github.com
-          repository: ${{ github.repository }}/gqmt:v0.3
+          repository: ${{ github.repository }}/gqmt
           tag_with_ref: true
