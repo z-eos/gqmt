@@ -9,11 +9,15 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-    
       - name: Debug Output
-        run: |
-          echo "${{ github.actor }} @ ${{ github.repository }}"
-
+        run: echo "${{ github.actor }} @ ${{ github.repository }}"
+      - name: Push to Docker Hub
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_TOKEN }}
+          repository: ze0s/gqmt
+          tag_with_ref: true
       - name: Push to GitHub Packages
         uses: docker/build-push-action@v1
         with:
