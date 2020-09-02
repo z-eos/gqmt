@@ -7,7 +7,7 @@ use warnings;
 use diagnostics;
 
 use Data::Printer caller_info => 1, print_escapes => 1, output => 'stdout', class => { expand => 2 };
-use Getopt::Long  qw(:config no_ignore_case gnu_getopt auto_help auto_version);;
+use Getopt::Long  qw(:config no_ignore_case gnu_getopt auto_help auto_version);
 use Pod::Usage    qw(pod2usage);
 use File::Basename;
 use LWP::UserAgent;
@@ -16,7 +16,7 @@ use Time::Piece;
 
 my  @PROGARG = ($0, @ARGV);
 my  $PROGNAM = fileparse($0);
-our $VERSION = '0.5';
+our $VERSION = '0.6';
 
 my $caller_message = "Printing in line __LINE__ of __FILENAME__; ";
 
