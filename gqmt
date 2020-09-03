@@ -1,4 +1,7 @@
-#!perl
+#!/bin/sh
+#! -*-perl-*-
+eval 'exec perl -x -wS $0 ${1+"$@"}' if 0;
+#
 # -*- mode: cperl; eval: (follow-mode) -*-
 #
 
@@ -16,7 +19,7 @@ use Time::Piece;
 
 my  @PROGARG = ($0, @ARGV);
 my  $PROGNAM = fileparse($0);
-our $VERSION = '0.6';
+our $VERSION = '0.7';
 
 my $caller_message = "Printing in line __LINE__ of __FILENAME__; ";
 
