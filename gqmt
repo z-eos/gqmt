@@ -19,7 +19,7 @@ use Time::Piece;
 
 my  @PROGARG = ($0, @ARGV);
 my  $PROGNAM = fileparse($0);
-our $VERSION = '0.7';
+our $VERSION = '0.8';
 
 my $caller_message = "Printing in line __LINE__ of __FILENAME__; ";
 
@@ -128,7 +128,7 @@ if ( ! $v ) {
 			 ts      => 'STUB TS' };
 }
 
-if ( $delete ) {
+if ( $delete && defined $to_delete ) {
   del_versions ({
 		 lwp => $lwp,
 		 req => $req,
@@ -139,10 +139,10 @@ if ( $delete ) {
 		});
 
 } else {
-  p ( $to_delete, colored => $colored );
+  print "nothing to delete\n";
 }
 
-  
+
 ######################################################################
 
 sub del_versions {

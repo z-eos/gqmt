@@ -1,6 +1,6 @@
 package App::gqmt;
 
-our $VERSION = '0.7';
+our $VERSION = '0.8';
 
 =head1 NAME
 
