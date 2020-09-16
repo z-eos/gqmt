@@ -20,7 +20,7 @@ use Time::Piece;
 use Template;
 
 my  @PROGARG = ($0, @ARGV);
-our $VERSION = '0.10';
+our $VERSION = '1.00';
 
 sub new {
   my $class = shift;
