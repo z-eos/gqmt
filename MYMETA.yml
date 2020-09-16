@@ -1,5 +1,5 @@
 ---
-abstract: 'a stub module for gqmt'
+abstract: 'script to clean up old package versions from GitHub repository'
 author:
   - 'Zeus Panchenko <zeus@gnu.org.ua>'
 build_requires:
@@ -19,15 +19,16 @@ no_index:
     - inc
 requires:
   Data::Printer: '0.38'
-  File::Basename: '2.00'
-  Getopt::Long: '2.00'
+  File::Basename: '2.84'
+  Getopt::Long: '2.34'
   JSON: '2.00'
   LWP::Protocol::https: '6.00'
   LWP::UserAgent: '6.00'
-  Pod::Usage: '1.00'
+  Pod::Man: '2.25'
+  Pod::Usage: '1.51'
   Time::Piece: '1.05'
   perl: '5.016001'
 resources:
   repository: ssh://git@github.com:z-eos/gqmt.git
-version: '0.8'
+version: v0.8.1
 x_serialization_backend: 'CPAN::Meta::YAML version 0.018'
