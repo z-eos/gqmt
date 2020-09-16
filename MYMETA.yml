@@ -21,14 +21,16 @@ requires:
   Data::Printer: '0.38'
   File::Basename: '2.84'
   Getopt::Long: '2.34'
+  HTTP::Request: '6.25'
   JSON: '2.00'
   LWP::Protocol::https: '6.00'
   LWP::UserAgent: '6.00'
   Pod::Man: '2.25'
   Pod::Usage: '1.51'
+  Template::Toolkit: '3.009'
   Time::Piece: '1.05'
   perl: '5.016001'
 resources:
   repository: ssh://git@github.com:z-eos/gqmt.git
-version: v0.8.1
+version: v0.9.1
 x_serialization_backend: 'CPAN::Meta::YAML version 0.018'
