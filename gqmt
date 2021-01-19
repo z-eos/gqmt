@@ -178,7 +178,7 @@ Example of query template:
 
 =head1 SEE ALSO
 
-L<https://docs.github.com/en/graphql/guides/forming-calls-with-graphq>
+L<https://docs.github.com/en/graphql/guides/forming-calls-with-graphql>
 
 =head1 AUTHOR
 
