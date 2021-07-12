@@ -77,11 +77,7 @@ GraphQL API endpoint, default is I<https://api.github.com/graphql>
 
 package name to manage versions of
 
-supported packages are:
-
-=item B<--package-regex> I<STRING>
-
-regex to exclude package version name from been processed
+hardcoded packages are:
 
 =over
 
@@ -92,6 +88,14 @@ app
 scheduler
 
 =back
+
+=item B<--package-regex> I<STRING>
+
+regex to exclude package version name from been processed
+
+for not hardcoded packages, default value is
+
+    '^(?:docker-base-layer|develop|release|master|v[0-9]+\.[0-9]+\.[0-9]+)$'
 
 =item B<-N | --rows-number> I<INTEGER>
 
